@@ -25,7 +25,7 @@ public class MyGenerator {
 
         // 全局配置
         GlobalConfig gc = new GlobalConfig();
-        gc.setOutputDir("e:\\project\\hblog\\src\\test");
+        gc.setOutputDir("e:\\project\\hblog\\src\\main\\java");
         gc.setFileOverride(true);
         gc.setActiveRecord(true);
         gc.setEnableCache(false);// XML 二级缓存
@@ -46,8 +46,8 @@ public class MyGenerator {
         dsc.setDbType(DbType.MYSQL);
         dsc.setDriverName("com.mysql.cj.jdbc.Driver");
         dsc.setUsername("root");
-        dsc.setPassword("root");
-        dsc.setUrl("jdbc:mysql://localhost:3306/hblog?characterEncoding=utf8&serverTimezone=GMT%2B8");
+        dsc.setPassword("123456");
+        dsc.setUrl("jdbc:mysql://185.239.69.195:3306/hblog?characterEncoding=utf8&serverTimezone=GMT%2B8");
         mpg.setDataSource(dsc);
 
         // 策略配置
@@ -55,8 +55,8 @@ public class MyGenerator {
 //        strategy.setTablePrefix(new String[]{""});// 此处可以修改为您的表前缀
 //        strategy.setNaming(NamingStrategy.remove_prefix_and_camel);// 表名生成策略
 //        strategy.setNaming(NamingStrategy.removePrefixAndCamel());// 表名生成策略
-        strategy.setInclude(new String[]{"user"}); // 需要生成的表
-//        strategy.setExclude(new String[]{"t_rong_bid"}); // 排除生成的表
+//        strategy.setInclude(new String[]{"user"}); // 需要生成的表
+        strategy.setExclude(new String[]{"test_user"}); // 排除生成的表
         // 字段名生成策略
         strategy.setNaming(NamingStrategy.underline_to_camel);
         // 自定义实体父类
@@ -81,7 +81,7 @@ public class MyGenerator {
 
         // 包配置
         PackageConfig pc = new PackageConfig();
-        pc.setParent("com.example");
+        pc.setParent("com.hblog");
         pc.setModuleName("");
         pc.setController("controller");
 

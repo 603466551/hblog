@@ -5,7 +5,7 @@ import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.extension.activerecord.Model;
 
 import java.io.Serializable;
-import java.time.LocalDateTime;
+import java.util.Date;
 
 /**
  * <p>
@@ -63,7 +63,7 @@ public class User extends Model<User> {
     /**
      * 生日
      */
-    private LocalDateTime birthday;
+    private Date birthday;
 
     /**
      * 头像
@@ -88,17 +88,17 @@ public class User extends Model<User> {
     /**
      * 最后的登陆时间
      */
-    private LocalDateTime lasted;
+    private Date lasted;
 
     /**
      * 创建日期
      */
-    private LocalDateTime created;
+    private Date created;
 
     /**
      * 最后修改时间
      */
-    private LocalDateTime modified;
+    private Date modified;
 
 
     public Long getId() {
@@ -165,11 +165,11 @@ public class User extends Model<User> {
         this.wechat = wechat;
     }
 
-    public LocalDateTime getBirthday() {
+    public Date getBirthday() {
         return birthday;
     }
 
-    public void setBirthday(LocalDateTime birthday) {
+    public void setBirthday(Date birthday) {
         this.birthday = birthday;
     }
 
@@ -205,27 +205,27 @@ public class User extends Model<User> {
         this.status = status;
     }
 
-    public LocalDateTime getLasted() {
+    public Date getLasted() {
         return lasted;
     }
 
-    public void setLasted(LocalDateTime lasted) {
+    public void setLasted(Date lasted) {
         this.lasted = lasted;
     }
 
-    public LocalDateTime getCreated() {
+    public Date getCreated() {
         return created;
     }
 
-    public void setCreated(LocalDateTime created) {
+    public void setCreated(Date created) {
         this.created = created;
     }
 
-    public LocalDateTime getModified() {
+    public Date getModified() {
         return modified;
     }
 
-    public void setModified(LocalDateTime modified) {
+    public void setModified(Date modified) {
         this.modified = modified;
     }
 
